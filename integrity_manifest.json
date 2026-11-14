@@ -8,16 +8,16 @@
     "bytes": 176
   },
   "COMPARISON.md": {
-    "sha256": "79625f73c34b64059f26fea6b4d92170249388299bcfc0879ec34e640f3b140c",
-    "bytes": 1835
+    "sha256": "decc87de89cb71eb6e229eb2329306e1015703d21e7e3a985bb47cd93b909235",
+    "bytes": 1850
   },
   "NOTICE.md": {
     "sha256": "195ac2fdfb922f928206f8b3d06794a7d47f14596c22d11b94648d949cea8f80",
     "bytes": 1185
   },
   "README.md": {
-    "sha256": "93306b8940d760f7bec8c6f04075f45de593fcd4cd0fd21a20413283dd5b4dfc",
-    "bytes": 16928
+    "sha256": "e1a0d2e073070eb3b3955ff971920c0202bdfdff5ce44cc4ae148393eb52b83f",
+    "bytes": 17345
   },
   "VIDEO_SCRIPT.md": {
     "sha256": "a513611bad1416a8cc0d65ca46a86a7e5f9b700348bd6babf22844715b48d109",
@@ -28,8 +28,8 @@
     "bytes": 8354
   },
   "build_notebook.py": {
-    "sha256": "d7feebd7fccbe191509f560c69e2047e5df4c37070efe222e00e4213a02d19bf",
-    "bytes": 13133
+    "sha256": "077d01e5d10d448cba6378e753f473e40175322f4428d5f6b78711f385d77536",
+    "bytes": 13216
   },
   "dashboard/build_dashboard.py": {
     "sha256": "c7f1466d7fd4cf441d086b4b60b0bb40278be77539ab9eca4b119e1bfd508673",
@@ -72,8 +72,8 @@
     "bytes": 528772
   },
   "deployment.json": {
-    "sha256": "8ec757a05143b2a7f30fa235171e008c5eebfe131bbf8ca498a5d1646a3731fc",
-    "bytes": 427
+    "sha256": "591ab517380afcd30c78803cf3543a70d5228d99652533da99b4e162c903122c",
+    "bytes": 1455
   },
   "execute_notebook.py": {
     "sha256": "00da50c882b5322ae0d2b92486eaf6c3bcf353407dd5943c42ef4283c125747c",
@@ -84,8 +84,8 @@
     "bytes": 5124
   },
   "notebook.ipynb": {
-    "sha256": "915a71fa60b225b23a915d5dd2c93498a8e50c7397847fee9fc4f5d89da6b947",
-    "bytes": 291275
+    "sha256": "e768206ea7170c3cf49eb7344591e62aebcea048d3ec7b5ffb1a641f27de08a6",
+    "bytes": 291358
   },
   "package_project.py": {
     "sha256": "b2c5129d0b11cea855348c0fcbfab62680630372ab8008c857a844121bfca8ce",
@@ -98,6 +98,14 @@
   "reports/cloud_bundle_smoke.txt": {
     "sha256": "d7284f2b2b06077eab64e916f34d3099a55f7eca2e2acd295372b69d313a9592",
     "bytes": 264
+  },
+  "reports/cloud_dashboard.png": {
+    "sha256": "3e179ef7649d70bcc90a3fc8ed61c14a67b47e616e01cab40d87d2069c837955",
+    "bytes": 71786
+  },
+  "reports/cloud_prediction.png": {
+    "sha256": "4f5149a875e207fce0622f1cbf3a440ad5999d929e933ea0aa908ef6b97e1271",
+    "bytes": 46749
   },
   "reports/feature_importance.png": {
     "sha256": "048ae43827eeb469399021250f63777803e93842278ef1988f981c45cf58ad86",

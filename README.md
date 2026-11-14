@@ -6,7 +6,7 @@
 
 **Repository referensi:** [lfiathan/jaya-reference](https://github.com/lfiathan/jaya-reference).
 
-**Status:** analisis, notebook, model, prototipe lokal, dan dashboard tersedia. **Deployment Streamlit Community Cloud belum selesai:** belum ada URL publik yang telah diverifikasi. Dengan demikian referensi ini belum memenuhi seluruh kriteria submission sampai langkah cloud selesai. Status terstruktur disimpan dalam `deployment.json`. Naskah video tersedia, belum ada rekaman.
+**Status:** analisis, notebook, model, prototipe lokal/cloud, dan dashboard tersedia. **[Buka prototipe publik](https://jaya-reference-lfiathan.streamlit.app/)** — akses tanpa login, prediksi individual, serta empat layar aplikasi telah diverifikasi pada 15 November 2026 (Asia/Jakarta). Status dan bukti tersimpan dalam `deployment.json` serta `reports/cloud_*.png`. Naskah video tersedia; rekaman video opsional belum dibuat.
 
 ## Business Understanding
 
@@ -179,9 +179,13 @@ Skor bukan kepastian atau probabilitas yang sudah tervalidasi untuk semua mahasi
 
 ### Streamlit Community Cloud
 
-**URL publik: belum tersedia. Deployment belum diverifikasi.** Tidak ada URL contoh yang disamarkan sebagai aplikasi aktif. Petunjuk berikut disiapkan untuk menyelesaikan kriteria cloud:
+**URL publik aktif: [Jaya Jaya Student Success](https://jaya-reference-lfiathan.streamlit.app/).** Dideploy dari `lfiathan/jaya-reference`, branch `main`, file `app.py`, Python 3.12. Akses tanpa login dan empat layar telah diperiksa. Contoh profil Management menghasilkan skor **44,5%**, sesuai model lokal, dengan pesan pendampingan rutin. Detail dan batas pengujian berada di `deployment.json`.
 
-1. Sediakan repository GitHub untuk proyek ini. Paket aplikasi minimum adalah `app.py`, `src/`, `model/`, `data/`, `reports/metrics.json`, `requirements.txt`, dan `.streamlit/config.toml`. `.venv/` tidak diunggah.
+![Dashboard publik](reports/cloud_dashboard.png)
+
+Langkah berikut mendokumentasikan cara mereproduksi deployment:
+
+1. Gunakan repository GitHub proyek ini atau fork terpisah. Paket aplikasi minimum adalah `app.py`, `src/`, `model/`, `data/`, `reports/metrics.json`, `requirements.txt`, dan `.streamlit/config.toml`. `.venv/` tidak diunggah.
 2. Login ke [Streamlit Community Cloud](https://share.streamlit.io/). Otorisasi akun/akses repository ditangani pemilik akun.
 3. Pilih **Create app**, repository/branch yang sesuai, dan file `app.py` di root. Pada Advanced settings pilih **Python 3.12**. Tidak memerlukan secrets untuk dataset publik ini.
 4. Tunggu instalasi dan pastikan aplikasi dapat membuat prediksi serta menampilkan dashboard tanpa error.
@@ -220,7 +224,7 @@ Petunjuk mengikuti [dokumentasi deployment resmi Streamlit](https://docs.streaml
 | `tests/test_project.py` | Separation, kesetaraan prediksi artefak, validasi input dan alur aplikasi |
 | `reports/test_log.txt` | Hasil pengujian integrasi |
 | `reports/notebook_execution.txt` | Status eksekusi notebook |
-| `deployment.json` | Status cloud aktual, URL tidak diisi sampai terverifikasi |
+| `deployment.json` | URL publik, environment cloud dan hasil verifikasi anonim |
 | `VIDEO_SCRIPT.md` | Naskah video opsional ±4 menit, bukan rekaman |
 | `COMPARISON.md` | Tempat pembandingan setelah karya mandiri tersedia |
 
@@ -229,9 +233,9 @@ Petunjuk mengikuti [dokumentasi deployment resmi Streamlit](https://docs.streaml
 | Kriteria | Status referensi |
 |---|---|
 | 1. Templat dan Markdown | Tersedia; struktur sumber disertakan |
-| 2. Seluruh proses sampai deployment | Analisis dan deployment lokal tersedia; cloud masih menunggu akses akun |
+| 2. Seluruh proses sampai deployment | Tahapan lengkap terdokumentasi; prototipe cloud dan akses anonim terverifikasi |
 | 3. Dashboard visual dan akses/ekspor | Metabase + kedua database disertakan; login dan prosedur restore tersedia |
-| 4. Solusi ML Streamlit + Community Cloud | Prototipe lokal teruji; URL cloud belum tersedia |
+| 4. Solusi ML Streamlit + Community Cloud | Prototipe lokal/cloud teruji; URL publik dan cara menjalankan tercantum |
 | 5. Rekomendasi action items | Tersedia, terkait temuan dan batas bukti |
 
 Referensi ini tidak menjanjikan nilai reviewer. Pembandingan dengan karya mandiri belum dilakukan karena karya tersebut belum diberikan.

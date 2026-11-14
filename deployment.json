@@ -1,11 +1,43 @@
 {
-  "status": "building",
+  "status": "deployed_and_verified",
   "provider": "Streamlit Community Cloud",
-  "public_url": null,
+  "public_url": "https://jaya-reference-lfiathan.streamlit.app/",
   "repository_url": "https://github.com/lfiathan/jaya-reference",
+  "branch": "main",
   "entrypoint": "app.py",
   "python_version": "3.12",
-  "anonymous_access_verified": false,
-  "reason": "Streamlit deployment started. Build and anonymous functional verification are still pending.",
-  "candidate_url": "https://jaya-reference-lfiathan.streamlit.app/"
+  "cloud_python_version": "3.12.16",
+  "cloud_pyarrow_version": "24.0.0",
+  "anonymous_access_verified": true,
+  "verified_date_local": "2026-11-15",
+  "timezone": "Asia/Jakarta",
+  "verified_app_commit": "1121531",
+  "checks": {
+    "anonymous_app_load": true,
+    "individual_prediction": true,
+    "csv_screen": true,
+    "dashboard_charts": true,
+    "model_information": true,
+    "technical_help_panel_absent": true
+  },
+  "example_prediction": {
+    "course": 9147,
+    "daytime_evening_attendance": 1,
+    "previous_qualification_grade": 130,
+    "admission_grade": 125,
+    "credited": 0,
+    "enrolled": 6,
+    "evaluations": 8,
+    "approved": 4,
+    "grade": 12,
+    "without_evaluations": 0,
+    "local_score": 0.44503807406079793,
+    "cloud_display": "44.5%",
+    "cloud_message": "Pendampingan rutin; tetap pantau perkembangan"
+  },
+  "evidence": [
+    "reports/cloud_dashboard.png",
+    "reports/cloud_prediction.png"
+  ],
+  "notes": "Anonymous browser session had no Streamlit login; all four screens rendered. Example score agrees with the local model to displayed precision. Cloud platform selected pyarrow 24.0.0 during dependency processing."
 }

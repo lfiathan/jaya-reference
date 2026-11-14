@@ -13,7 +13,7 @@ Referensi ini dibuat secara terpisah. Pembandingan baru dapat dilakukan setelah 
 | Hasil test | AP 0,9207; recall 0,8380; precision 0,8123; n=726 | Belum diberikan | Belum dibandingkan |
 | Beban & kasus terlewat | 293 tinjauan, 55 false positive, 46 false negative | Belum diberikan | Belum dibandingkan |
 | Dashboard | Metabase, 10 kartu teruji query + ekspor DB | Belum diberikan | Belum dibandingkan |
-| Deployment | Lokal berjalan; cloud menunggu akun | Belum diberikan | Belum dibandingkan |
+| Deployment | Lokal dan cloud teruji; akses anonim terverifikasi | Belum diberikan | Belum dibandingkan |
 | Conclusion & tindakan | README dan notebook; asosiasi dipisahkan dari kausalitas | Belum diberikan | Belum dibandingkan |
 
 Model yang berbeda tidak otomatis salah. Metrik dari populasi, fitur, waktu prediksi, atau split berbeda tidak dapat dibandingkan secara langsung. Tidak ada nilai referensi yang dianggap sebagai kebenaran tanpa bukti. Perbedaan hasil harus ditelusuri ke data, definisi target, pemisahan, transformasi, atau kode yang dapat dijalankan.
