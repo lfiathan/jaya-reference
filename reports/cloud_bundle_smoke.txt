@@ -1,0 +1,2 @@
+2026-11-15 06:17:40.457 WARNING streamlit.runtime.scriptrunner_utils.script_run_context: Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+Extracted cloud bundle: all 4 routes and an individual prediction passed

@@ -1,0 +1,10 @@
+{
+  "status": "ready_for_cloud_deployment",
+  "provider": "Streamlit Community Cloud",
+  "public_url": null,
+  "repository_url": "https://github.com/lfiathan/jaya-reference",
+  "entrypoint": "app.py",
+  "python_version": "3.12",
+  "anonymous_access_verified": false,
+  "reason": "Reference project prepared for repository upload; Streamlit sign-in and public deployment verification remain pending."
+}

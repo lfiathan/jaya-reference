@@ -1,0 +1,7 @@
+{
+  "restored": true,
+  "verified_cards": 10,
+  "url": "http://localhost:3301/dashboard/2",
+  "source": "exported H2 + PostgreSQL SQL dump",
+  "expected_rows_match": true
+}

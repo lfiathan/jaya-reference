@@ -1,0 +1,169 @@
+{
+  "provenance": {
+    "source": "https://raw.githubusercontent.com/dicodingacademy/dicoding_dataset/main/students_performance/data.csv",
+    "sha256": "a37dbda5555089a8d39b8be6f1a242f68403963a1f81423115c9676c8c7100e9",
+    "rows": 4424,
+    "columns": 37,
+    "missing_cells": 0,
+    "duplicate_rows": 0,
+    "status_counts": {
+      "Graduate": 2209,
+      "Dropout": 1421,
+      "Enrolled": 794
+    },
+    "python": "3.12.7",
+    "sklearn": "1.9.1"
+  },
+  "selected_model": "logistic",
+  "feature_timing": "End of semester one; no semester-two, financial, macroeconomic or demographic fields used. Historical availability not independently time-stamped.",
+  "features": [
+    "Course",
+    "Daytime_evening_attendance",
+    "Previous_qualification_grade",
+    "Admission_grade",
+    "Curricular_units_1st_sem_credited",
+    "Curricular_units_1st_sem_enrolled",
+    "Curricular_units_1st_sem_evaluations",
+    "Curricular_units_1st_sem_approved",
+    "Curricular_units_1st_sem_grade",
+    "Curricular_units_1st_sem_without_evaluations"
+  ],
+  "split_counts": {
+    "train": 2178,
+    "validation": 726,
+    "test": 726,
+    "unresolved": 794
+  },
+  "cv_results": [
+    {
+      "model": "dummy_prior",
+      "cv_ap_mean": 0.39164293999789096,
+      "cv_ap_std": 0.0006845036189365418,
+      "fold_scores": [
+        0.3922018348623853,
+        0.3922018348623853,
+        0.3922018348623853,
+        0.39080459770114945,
+        0.39080459770114945
+      ]
+    },
+    {
+      "model": "logistic",
+      "cv_ap_mean": 0.9088938766342898,
+      "cv_ap_std": 0.0074396110358264005,
+      "fold_scores": [
+        0.9003598607099688,
+        0.9191568585414144,
+        0.9163091440986113,
+        0.905266784292485,
+        0.9033767355289696
+      ]
+    },
+    {
+      "model": "random_forest",
+      "cv_ap_mean": 0.8968245722481338,
+      "cv_ap_std": 0.010855667272006892,
+      "fold_scores": [
+        0.8879604590943612,
+        0.9136443037824176,
+        0.9050104912704905,
+        0.8926568666777331,
+        0.8848507404156662
+      ]
+    },
+    {
+      "model": "hist_gradient_boosting",
+      "cv_ap_mean": 0.9000899330021351,
+      "cv_ap_std": 0.010087644747039375,
+      "fold_scores": [
+        0.9007956556358111,
+        0.9121390184025462,
+        0.9098719326795754,
+        0.8914179700457214,
+        0.8862250882470208
+      ]
+    }
+  ],
+  "threshold": 0.4557202141424468,
+  "threshold_policy": "Highest validation precision subject to dropout recall >= 0.80; proposed target, not an institutional SLA.",
+  "validation": {
+    "pr_auc_ap": 0.9065984485666523,
+    "roc_auc": 0.9167994391689503,
+    "precision": 0.8351648351648352,
+    "recall": 0.8028169014084507,
+    "f1": 0.8186714542190305,
+    "f2": 0.8090844570617459,
+    "balanced_accuracy": 0.8505034733286598,
+    "brier": 0.10296370930337542,
+    "confusion_matrix": [
+      [
+        397,
+        45
+      ],
+      [
+        56,
+        228
+      ]
+    ],
+    "flagged": 273,
+    "n": 726
+  },
+  "test": {
+    "pr_auc_ap": 0.9207174241465996,
+    "roc_auc": 0.9362293671531451,
+    "precision": 0.8122866894197952,
+    "recall": 0.8380281690140845,
+    "f1": 0.8249566724436742,
+    "f2": 0.8327501749475158,
+    "balanced_accuracy": 0.8567968899369065,
+    "brier": 0.09444137304677101,
+    "confusion_matrix": [
+      [
+        387,
+        55
+      ],
+      [
+        46,
+        238
+      ]
+    ],
+    "flagged": 293,
+    "n": 726
+  },
+  "dummy_test": {
+    "pr_auc_ap": 0.39118457300275483,
+    "roc_auc": 0.5,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "f2": 0.0,
+    "balanced_accuracy": 0.5,
+    "brier": 0.23815941365402926,
+    "confusion_matrix": [
+      [
+        442,
+        0
+      ],
+      [
+        284,
+        0
+      ]
+    ],
+    "flagged": 0,
+    "n": 726
+  },
+  "test_ci95_bootstrap": {
+    "pr_auc_ap": [
+      0.8986283444963526,
+      0.9440573914666485
+    ],
+    "recall": [
+      0.7962132278352607,
+      0.8842036842036842
+    ],
+    "precision": [
+      0.7754234925060997,
+      0.8566558441558442
+    ]
+  }
+}

@@ -1,0 +1,151 @@
+{
+  "dashboard_id": 2,
+  "url": "http://localhost:3300/dashboard/2",
+  "cards": [
+    {
+      "name": "Seluruh mahasiswa",
+      "card_id": 38,
+      "sql": "SELECT COUNT(*) AS mahasiswa FROM students",
+      "rows": [
+        [
+          4424
+        ]
+      ]
+    },
+    {
+      "name": "Dropout / seluruh catatan (%)",
+      "card_id": 39,
+      "sql": "SELECT ROUND(100.0*COUNT(*) FILTER(WHERE status='Dropout')/COUNT(*),2) AS dropout_persen FROM students",
+      "rows": [
+        [
+          32.12
+        ]
+      ]
+    },
+    {
+      "name": "Enrolled | hasil belum selesai",
+      "card_id": 40,
+      "sql": "SELECT COUNT(*) AS enrolled FROM students WHERE status='Enrolled'",
+      "rows": [
+        [
+          794
+        ]
+      ]
+    },
+    {
+      "name": "Nilai semester 1 | skala 0\u201320",
+      "card_id": 41,
+      "sql": "SELECT ROUND(AVG(curricular_units_1st_sem_grade)::numeric,2) AS nilai FROM students",
+      "rows": [
+        [
+          10.64
+        ]
+      ]
+    },
+    {
+      "name": "Komposisi status | jumlah mahasiswa",
+      "card_id": 42,
+      "sql": "SELECT status,COUNT(*) AS mahasiswa FROM students GROUP BY status ORDER BY mahasiswa DESC",
+      "rows": [
+        [
+          "Graduate",
+          2209
+        ],
+        [
+          "Dropout",
+          1421
+        ],
+        [
+          "Enrolled",
+          794
+        ]
+      ]
+    },
+    {
+      "name": "Pembayaran & dropout (%) | ukuran kelompok di bawah",
+      "card_id": 43,
+      "sql": "SELECT CASE WHEN tuition_fees_up_to_date=1 THEN 'Mutakhir' ELSE 'Belum mutakhir' END AS pembayaran,ROUND(100.0*COUNT(*) FILTER(WHERE status='Dropout')/COUNT(*),2) AS dropout_persen,COUNT(*) AS n FROM students GROUP BY tuition_fees_up_to_date ORDER BY dropout_persen DESC",
+      "rows": [
+        [
+          "Belum mutakhir",
+          86.55,
+          528
+        ],
+        [
+          "Mutakhir",
+          24.74,
+          3896
+        ]
+      ]
+    },
+    {
+      "name": "Unit lulus semester 1 | rata-rata menurut status",
+      "card_id": 44,
+      "sql": "SELECT status,ROUND(AVG(curricular_units_1st_sem_approved)::numeric,2) AS unit_lulus,COUNT(*) AS n FROM students GROUP BY status ORDER BY unit_lulus",
+      "rows": [
+        [
+          "Dropout",
+          2.55,
+          1421
+        ],
+        [
+          "Enrolled",
+          4.32,
+          794
+        ],
+        [
+          "Graduate",
+          6.23,
+          2209
+        ]
+      ]
+    },
+    {
+      "name": "Beasiswa & dropout (%) | asosiasi historis",
+      "card_id": 45,
+      "sql": "SELECT CASE WHEN scholarship_holder=1 THEN 'Penerima' ELSE 'Bukan penerima' END AS beasiswa,ROUND(100.0*COUNT(*) FILTER(WHERE status='Dropout')/COUNT(*),2) AS dropout_persen,COUNT(*) AS n FROM students GROUP BY scholarship_holder ORDER BY dropout_persen DESC",
+      "rows": [
+        [
+          "Bukan penerima",
+          38.71,
+          3325
+        ],
+        [
+          "Penerima",
+          12.19,
+          1099
+        ]
+      ]
+    },
+    {
+      "name": "Ukuran kelompok pembayaran | jumlah mahasiswa",
+      "card_id": 46,
+      "sql": "SELECT CASE WHEN tuition_fees_up_to_date=1 THEN 'Mutakhir' ELSE 'Belum mutakhir' END AS pembayaran,COUNT(*) AS mahasiswa FROM students GROUP BY tuition_fees_up_to_date",
+      "rows": [
+        [
+          "Belum mutakhir",
+          528
+        ],
+        [
+          "Mutakhir",
+          3896
+        ]
+      ]
+    },
+    {
+      "name": "Ukuran kelompok beasiswa | jumlah mahasiswa",
+      "card_id": 47,
+      "sql": "SELECT CASE WHEN scholarship_holder=1 THEN 'Penerima' ELSE 'Bukan penerima' END AS beasiswa,COUNT(*) AS mahasiswa FROM students GROUP BY scholarship_holder",
+      "rows": [
+        [
+          "Bukan penerima",
+          3325
+        ],
+        [
+          "Penerima",
+          1099
+        ]
+      ]
+    }
+  ]
+}

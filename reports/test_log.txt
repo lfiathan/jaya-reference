@@ -1,0 +1,10 @@
+test_invalid_serving_input (test_project.ProjectTest.test_invalid_serving_input) ... ok
+test_persisted_predictions_and_metrics (test_project.ProjectTest.test_persisted_predictions_and_metrics) ... ok
+test_streamlit_routes_and_prediction (test_project.ProjectTest.test_streamlit_routes_and_prediction) ... 2026-11-15 06:10:35.398 WARNING streamlit.runtime.scriptrunner_utils.script_run_context: Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_training_separation_and_features (test_project.ProjectTest.test_training_separation_and_features) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 1.900s
+
+OK
