@@ -24,8 +24,8 @@
     "bytes": 2399
   },
   "app.py": {
-    "sha256": "1721d6ba0a41c3cffe774769d0bd644c31e7dd1cab41eae388e455990e710906",
-    "bytes": 8308
+    "sha256": "e8d839b4857871345276f0e0036caeea59df5c2f7322357264002381d97ec387",
+    "bytes": 8354
   },
   "build_notebook.py": {
     "sha256": "d7feebd7fccbe191509f560c69e2047e5df4c37070efe222e00e4213a02d19bf",
@@ -72,8 +72,8 @@
     "bytes": 528772
   },
   "deployment.json": {
-    "sha256": "993a141993f24123c6a6fec3ce139783585e5c52294ffff876b2f5ea4d60aa3b",
-    "bytes": 402
+    "sha256": "8ec757a05143b2a7f30fa235171e008c5eebfe131bbf8ca498a5d1646a3731fc",
+    "bytes": 427
   },
   "execute_notebook.py": {
     "sha256": "00da50c882b5322ae0d2b92486eaf6c3bcf353407dd5943c42ef4283c125747c",
@@ -132,7 +132,7 @@
     "bytes": 32537
   },
   "reports/test_log.txt": {
-    "sha256": "379632a5bf9ec794549fe44a3c2f3b67d5c4a45cb13508ac6b5e33240da6b8fb",
+    "sha256": "2985508e21f4bda13457e6d68489d0e28efd67c89527cf31fbbb1c7a8ead361c",
     "bytes": 707
   },
   "reports/test_predictions.csv": {
@@ -176,7 +176,7 @@
     "bytes": 1738
   },
   "tests/test_project.py": {
-    "sha256": "c1bd63431b774654bbd1b3e0cf6d24432048796ba0725f026655bee41c93ff88",
-    "bytes": 3020
+    "sha256": "627594e4cf528f8c3113e519e1bf188069ca7be094ffd6da55855a094c2d0822",
+    "bytes": 3445
   }
 }

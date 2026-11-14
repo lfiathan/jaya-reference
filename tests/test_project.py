@@ -50,6 +50,13 @@ class ProjectTest(unittest.TestCase):
         app.button[0].click().run()
         self.assertEqual(len(app.exception),0)
         self.assertTrue(any('Skor model' in m.label for m in app.metric))
+        self.assertTrue(any('Pendampingan rutin' in item.value for item in app.success))
+        for field in app.number_input:
+            if field.label in ['Unit yang lulus','Rata-rata nilai semester (0–20)']:
+                field.set_value(0)
+        app.button[0].click().run()
+        self.assertEqual(len(app.exception),0)
+        self.assertTrue(any('Prioritaskan tinjauan' in item.value for item in app.warning))
         for page in ['Prediksi CSV','Dashboard','Tentang model']:
             app.sidebar.radio[0].set_value(page).run()
             self.assertEqual(len(app.exception),0,page)

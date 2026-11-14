@@ -53,7 +53,10 @@ if page=="Prediksi individual":
             score=out.skor_dropout.iloc[0]
             flagged=bool(out.perlu_tinjauan.iloc[0])
             st.metric("Skor model",f"{score:.1%}")
-            st.warning("Prioritaskan tinjauan pendampingan") if flagged else st.success("Pendampingan rutin; tetap pantau perkembangan")
+            if flagged:
+                st.warning("Prioritaskan tinjauan pendampingan")
+            else:
+                st.success("Pendampingan rutin; tetap pantau perkembangan")
             st.write(f"Ambang tinjauan yang dipilih dari validasi: {bundle['threshold']:.3f}. Skor ini merupakan estimasi model pada populasi berlabel selesai (Dropout/Graduate), bukan kepastian atau peluang terkalibrasi untuk seluruh mahasiswa aktif.")
             st.info("Tindak lanjut: verifikasi data, diskusikan hambatan belajar, dan susun rencana bersama dosen pembimbing. Jangan gunakan skor sebagai dasar sanksi atau pembatasan akses pendidikan.")
         except ValueError as exc:
